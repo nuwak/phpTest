@@ -13,14 +13,18 @@
         </testsuite>
     </testsuites>
     <filter>
+        <whitelist>
+            <directory suffix=".php">models/</directory>
+            <directory suffix=".php">controller/</directory>
+        </whitelist>
         <blacklist>
             <directory suffix=".php">./vendor</directory>
         </blacklist>
     </filter>
     <php>
-        <var name="DB_DSN" value="sqlite:data/test.db" />
+        <var name="DB_DSN" value="sqlite:/home/igor/projects/backendSkill/PHPUnit/basic/data/test.db" />
         <var name="DB_USER" value="" />
         <var name="DB_PASSWD" value="" />
-        <var name="DB_DBNAME" value="" />
+        <var name="DB_DBNAME" value="user" />
     </php>
 </phpunit>
