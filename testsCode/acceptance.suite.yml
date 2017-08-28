@@ -1,6 +1,11 @@
 actor: AcceptanceTester
 modules:
     enabled:
-        - PhpBrowser:
+#        - PhpBrowser:
+#            url: https://ya.ru
+        - WebDriver:
             url: https://ya.ru
+            browser: firefox
+            restart: true
+            window_size: 1024X768
         - \Helper\Acceptance
